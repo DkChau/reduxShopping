@@ -1,9 +1,10 @@
-import {FETCH_PRODUCTS_PENDING, FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_ERROR} from '../Actions/dataAction';
+import {FETCH_PRODUCTS_PENDING,FETCH_SINGLE_PRODUCT_SUCCESS, FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_ERROR} from '../Actions/dataAction';
 
 const initialState = {
     pending: false,
     products: [],
-    error: null
+    error: null,
+    singleProduct:[],
 }
 
 function dataReducer(state = initialState, action) {
@@ -17,8 +18,14 @@ function dataReducer(state = initialState, action) {
             return {
                 ...state,
                 pending: false,
-                products: action.payload
-            }
+                products: [...action.payload]
+        }
+        case FETCH_SINGLE_PRODUCT_SUCCESS:
+            return {
+                ...state,
+                pending: false,
+                singleProduct: action.payload
+             }
         case FETCH_PRODUCTS_ERROR:
             return {
                 ...state,
