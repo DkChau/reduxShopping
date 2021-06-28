@@ -9,8 +9,8 @@ import {
     CategoryItem,
     Item,
     ItemImg,
-    ItemDescription,
-    ItemPrice,
+    ItemName,
+    ItemSeries,
  } from './CategoryElements';
 import CategoryBar from '../CategoryBar';
 
@@ -19,7 +19,7 @@ const Category = (props) => {
 
     useEffect(()=>{
         let gameSeries=props.match.params.id.split('_').join(' ');
-        props.fetchGameSeries('https://www.amiiboapi.com/api/amiibo/?gameseries=' +gameSeries);
+        props.fetchGameSeries('https://www.amiiboapi.com/api/amiibo/?type=Figure&gameseries=' +gameSeries);
 
     },[props.match.params.id])
 
@@ -34,8 +34,8 @@ const Category = (props) => {
                         return (
                             <Item key={uniqid()}to={'/item/'+item.head+item.tail}>
                                 <ItemImg src={item.image}></ItemImg>
-                                <ItemDescription>TestItem</ItemDescription>
-                                <ItemPrice>{item.gameSeries}</ItemPrice>
+                                <ItemName>{item.name}</ItemName>
+                                <ItemSeries>{item.gameSeries}</ItemSeries>
                             </Item>
                         )
                     })}

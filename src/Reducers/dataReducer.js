@@ -26,6 +26,8 @@ function dataReducer(state = initialState, action) {
         case FETCH_PRODUCTS_PENDING: 
             return {
                 ...state,
+                singleProduct:[],
+                gameSeriesFigures:[],
                 pending: true
             }
         case FETCH_PRODUCTS_SUCCESS:

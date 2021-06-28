@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 export const ItemContainer=styled.div`
     width:100vw;
@@ -29,20 +30,48 @@ export const ItemImg=styled.img`
     width:auto;
 `
 
-export const ItemDescription=styled.p`
-    color:green;
+export const ItemName=styled.h2`
+    color:black;
+    font-weight: 600;
+    font-size: 32px;
+    margin:0;
+    margin-top: 20px;
 `
 
-export const ItemPrice = styled.p`
+export const ItemSeries = styled.h3`
+    color:black;
+    margin:0;
+`
+
+export const ItemPrice = styled.h3`
     color:red;
+    margin:20px;
 `
 
 export const BtnWrapper = styled.div`
     display:flex;
     justify-content: center;
     align-items: center;
+    flex-direction:column;
 `
 
 export const Button=styled.button`
-    
+
 `
+export const ButtonLink=styled(Link)`
+    &.hidden{
+        display:none;
+    }
+`
+
+export const DateWrapper = styled.div`
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
+
+export const Dates= styled.div`
+    color:purple;
+`
+

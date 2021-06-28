@@ -34,29 +34,40 @@ export const Item=styled(Link)`
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    margin:10px;
-    width:300px;
+    margin:40px 60px;
+    width:250px;
     height:290px;
+    padding:0 10px;
     padding-top: 20px;
     border:1px solid black;
+    border-radius: 50px;
     text-decoration:none;
-    transition: width 0.3s, height 0.3s;
+    /* transition: width 0.5s, height 0.5s;  */
 
-    &:hover{
-        width:320px;
+    /* &:hover{
+        width:260px;
         height:300px;
-    }
+    }  */
 `
 
 export const ItemImg=styled.img`
-    height:200px;
+    height:150px;
+    /* border:1px solid black;
+    padding: 20px;
+    border-radius: 50px; */
     width:auto;
 `
 
-export const ItemDescription=styled.p`
-    color:red;
+export const ItemName=styled.h2`
+    padding-top: 20px;
+    margin:0;
+    text-align:center;
+    font-size: 16px;
+    color:#3d70b2;
 `
 
-export const ItemPrice=styled.p`
-    color:green;
+export const ItemSeries=styled.h3`
+    color:black;
+    font-weight:300;
+    margin:5px;
 `

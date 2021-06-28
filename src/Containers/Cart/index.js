@@ -12,7 +12,13 @@ import {
     BtnWrapper,
     DeleteBtn,
     CartFooter,
-    CartTotal
+    CartTotal,
+    ItemDescription,
+    ItemName,
+    ItemSeries,
+    CartTagItem,
+    CartTagPrice,
+    CartHeading,
 } from './CartElements';
 
 const Cart = (props) => {
@@ -22,28 +28,36 @@ const Cart = (props) => {
     }
     
     const handleChange = (e) =>{
+        e.preventDefault();
         props.changeQuantity(e.target.parentNode.id,e.target.value);
     }
 
     if(props.cart.cart.length===0){return ( <div> empty </div>)}
     return (
         <CartContainer>
+            <CartHeading>
+                <CartTagItem>Item</CartTagItem>
+                <CartTagPrice>Price</CartTagPrice>
+            </CartHeading>
             <CartWrapper>
-                {props.cart.cart.map(item=>{
+                {props.cart.cart.map((item,index)=>{
                     return (
-                    <CartItem key={uniqid()} id={item.id}> 
+                    <CartItem key={'cartItem'+index} > 
                         <ItemImg src={item.image}></ItemImg>
-                        <ItemQuantity onChange={handleChange} type='number' min='1' value={item.quantity}></ItemQuantity>
-                        <ItemPrice>{item.price * item.quantity}</ItemPrice>
-                        <BtnWrapper>
-                            <DeleteBtn onClick={remCart}>Delete From Cart</DeleteBtn>
-                        </BtnWrapper>
+                        <ItemDescription id={item.id}>
+                            <ItemName>{item.name}</ItemName>
+                            <ItemQuantity onChange={handleChange} type='number' min='1' value={item.quantity}></ItemQuantity>
+                            <BtnWrapper>
+                                <DeleteBtn onClick={remCart}>Delete From Cart</DeleteBtn>
+                            </BtnWrapper>
+                        </ItemDescription>
+                        <ItemPrice>{(item.price * item.quantity).toFixed(2)}</ItemPrice>
                     </CartItem>
                     )
                 })}
             </CartWrapper>
             <CartFooter>
-                <CartTotal>{props.cart.total}</CartTotal>
+                <CartTotal>{props.cart.total.toFixed(2)}</CartTotal>
             </CartFooter>
         </CartContainer>
     )

@@ -3,7 +3,12 @@ import Loading from '../../Components/Loading'
 
 const Home = () => {
     return (
-      <Loading></Loading>
+      <div>
+        <div>Image Slider here</div>
+        <div>
+          Link here
+        </div>
+      </div>
     )
 }
 

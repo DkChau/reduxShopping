@@ -9,8 +9,9 @@ import {
     ListItem,
     Item,
     ItemImg,
-    ItemDescription,
-    ItemPrice,
+    ItemName,
+    ItemSeries,
+    ItemRelease,
  } from './ItemListElements';
 import CategoryBar from '../CategoryBar';
 
@@ -32,8 +33,9 @@ const ItemList = (props) => {
                         return (
                             <Item key={uniqid()}to={'item/'+item.head+item.tail}>
                                 <ItemImg src={item.image}></ItemImg>
-                                <ItemDescription>TestItem</ItemDescription>
-                                <ItemPrice>{item.gameSeries}</ItemPrice>
+                                <ItemName>{item.name}</ItemName>
+                                <ItemSeries>{item.gameSeries}</ItemSeries>
+                                {/* <ItemRelease>{item.release.jp}</ItemRelease> */}
                             </Item>
                         )
                     })}

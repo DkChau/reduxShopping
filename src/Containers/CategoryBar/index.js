@@ -4,11 +4,13 @@ import {
     CategoryLink,
     CategoryWrapper,
     CategoryWord,
+    CategoryHeading,
 } from './CategoryBarElements'
 
 const CategoryBar = () => {
     return (
         <CategoryContainer>
+            {/* <CategoryHeading>Franchises</CategoryHeading> */}
             <CategoryWrapper>
                 <CategoryLink to='/category/Super_Mario'>
                     <CategoryWord>Super Mario</CategoryWord>
@@ -38,7 +40,7 @@ const CategoryBar = () => {
                     <CategoryWord>Fire Emblem</CategoryWord>
                 </CategoryLink>
                 <CategoryLink to='/category/Monster_Hunter'>
-                    <CategoryWord>Monster</CategoryWord>
+                    <CategoryWord>Monster Hunter</CategoryWord>
                 </CategoryLink>
             </CategoryWrapper>
         </CategoryContainer>
