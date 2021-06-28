@@ -34,6 +34,15 @@ export const ItemDescription=styled.p`
 `
 
 export const ItemPrice = styled.p`
-    color:red
+    color:red;
 `
 
+export const BtnWrapper = styled.div`
+    display:flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const Button=styled.button`
+    
+`

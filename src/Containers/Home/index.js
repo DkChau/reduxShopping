@@ -1,10 +1,9 @@
 import React from 'react'
+import Loading from '../../Components/Loading'
 
 const Home = () => {
     return (
-        <div>
-          hello  
-        </div>
+      <Loading></Loading>
     )
 }
 

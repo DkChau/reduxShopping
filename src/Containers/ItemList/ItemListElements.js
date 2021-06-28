@@ -3,10 +3,11 @@ import {Link} from 'react-router-dom';
 
 export const ListContainer = styled.div`
     display:flex;
+    margin-top: 80px;
     justify-content: center;
     align-items: center;
     width:100vw;
-    height:calc(100vh - 80px);
+    height:auto;
 `
 
 export const ListWrapper=styled.div`
@@ -21,6 +22,9 @@ export const ListItem=styled.ul`
     display:flex;
     height:auto;
     width:auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
 `
 

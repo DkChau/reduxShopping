@@ -4,14 +4,15 @@ import Home from './Containers/Home'
 import NavBar from './Containers/NavBar';
 import {Provider} from 'react-redux';
 import Store from './Store/Store';
-import Item from './Containers/Item'
+import Item from './Containers/Item';
+import Cart from './Containers/Cart';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import ItemList from './Containers/ItemList';
 
 function App() {
 
   useEffect(()=>{
-
+ 
   },[])
   
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route exact path='/' component={Home}></Route>
           <Route exact path='/shop' component={ItemList}></Route>
           <Route exact path='/item/:id' component={Item}></Route>
+          <Route exact path='/cart' component={Cart}></Route>
         </Switch>
       </Router>
     </Provider>

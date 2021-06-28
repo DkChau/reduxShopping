@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
+import Background from '../../Images/Background.png';
 
 export const NavContainer=styled.div`
     display:flex;
     width:100vw;
+    background-image: url(${Background});
     height:auto;
     position:sticky;
     top:0;
@@ -20,7 +22,6 @@ export const NavWrapper=styled.div`
 export const NavLinks=styled.nav`
     width:100vw;
     height:80px;
-    background:black;
     color:white;
     display:flex;
     justify-content: space-around;
@@ -31,8 +32,14 @@ export const LinkWrapper=styled.div`
     width:auto;
     height:auto;
 `
-
+export const LinkLogo = styled.img`
+    height:40px;
+    width:auto;
+`
 export const LinkItem=styled(Link)`
     text-decoration:none;
-    color:white;
+    color:black;
+    font-size:24px;
+    font-weight:400;
+    
 `
