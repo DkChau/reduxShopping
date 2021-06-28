@@ -1,46 +1,47 @@
 import React, {useEffect} from 'react'
 import {connect} from 'react-redux';
-import {fetchProducts} from '../../Actions/dataAction'
+import {fetchGameSeries} from '../../Actions/dataAction'
 import uniqid from 'uniqid'
 import Loading from '../../Components/Loading'
 import { 
-    ListContainer,
-    ListWrapper,
-    ListItem,
+    CategoryContainer,
+    CategoryWrapper,
+    CategoryItem,
     Item,
     ItemImg,
     ItemDescription,
     ItemPrice,
- } from './ItemListElements';
+ } from './CategoryElements';
 import CategoryBar from '../CategoryBar';
 
-const ItemList = (props) => {
+const Category = (props) => {
+
+
     useEffect(()=>{
-        if(props.data.products.length===0){
-            props.fetchProducts('https://www.amiiboapi.com/api/amiibo?type=figure');
-        }
-    },[])
+        let gameSeries=props.match.params.id.split('_').join(' ');
+        props.fetchGameSeries('https://www.amiiboapi.com/api/amiibo/?gameseries=' +gameSeries);
+
+    },[props.match.params.id])
 
     if(props.data.pending===true){return <Loading></Loading>}
     
     return (
-        <ListContainer>
+        <CategoryContainer>
             <CategoryBar/>
-            <ListWrapper>
-                <ListItem>
-                    {props.data.products.map(item=>{
+            <CategoryWrapper>
+                <CategoryItem>
+                    {props.data.gameSeriesFigures.map(item=>{
                         return (
-                            <Item key={uniqid()}to={'item/'+item.head+item.tail}>
+                            <Item key={uniqid()}to={'/item/'+item.head+item.tail}>
                                 <ItemImg src={item.image}></ItemImg>
                                 <ItemDescription>TestItem</ItemDescription>
                                 <ItemPrice>{item.gameSeries}</ItemPrice>
                             </Item>
                         )
                     })}
-                </ListItem>
-            </ListWrapper>
-        </ListContainer>
-
+                </CategoryItem>
+            </CategoryWrapper>
+        </CategoryContainer>
     )
 }
 const mapStateToProps = state =>{
@@ -51,10 +52,10 @@ const mapStateToProps = state =>{
 
 const mapDispatchToProps = dispatch => {
     return{ 
-        fetchProducts:(url)=>{
-            dispatch(fetchProducts(url));
+        fetchGameSeries:(url)=>{
+            dispatch(fetchGameSeries(url));
         }
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(ItemList);
+export default connect(mapStateToProps,mapDispatchToProps)(Category);

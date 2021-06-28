@@ -1,5 +1,6 @@
 export const FETCH_PRODUCTS_PENDING = 'FETCH_PRODUCTS_PENDING';
 export const FETCH_PRODUCTS_SUCCESS = 'FETCH_PRODUCTS_SUCCESS';
+export const FETCH_GAME_SERIES_SUCCESS = 'FETCH_GAME_SERIES_SUCCESS';
 export const FETCH_SINGLE_PRODUCT_SUCCESS = 'FETCH_SINGLE_PRODUCT_SUCCESS';
 export const FETCH_PRODUCTS_ERROR = 'FETCH_PRODUCTS_ERROR';
 
@@ -20,6 +21,13 @@ function fetchProductsSuccess(products) {
 function fetchSingleProductSuccess(products) {
     return {
         type: FETCH_SINGLE_PRODUCT_SUCCESS,
+        payload: products
+    }
+}
+
+function fetchGameSeriesSuccess(products) {
+    return {
+        type: FETCH_GAME_SERIES_SUCCESS,
         payload: products
     }
 }
@@ -59,6 +67,23 @@ export const fetchSingleProduct = (url) => {
                     throw(res.error);
                 }
                 dispatch(fetchSingleProductSuccess(res.amiibo));
+            })
+            .catch(error => {
+                dispatch(fetchProductsError(error.message));
+            })
+    }
+}
+
+export const fetchGameSeries = (url) => {
+    return (dispatch) => {
+        dispatch(fetchProductsPending());
+        fetch(url)
+            .then(res => res.json())
+            .then(res => {
+                if(res.error) {
+                    throw(res.error);
+                }
+                dispatch(fetchGameSeriesSuccess(res.amiibo));
             })
             .catch(error => {
                 dispatch(fetchProductsError(error.message));

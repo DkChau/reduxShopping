@@ -8,6 +8,7 @@ import Item from './Containers/Item';
 import Cart from './Containers/Cart';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import ItemList from './Containers/ItemList';
+import Category from './Containers/Category';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route exact path='/shop' component={ItemList}></Route>
           <Route exact path='/item/:id' component={Item}></Route>
           <Route exact path='/cart' component={Cart}></Route>
+          <Route exact path='/category/:id' component={Category}></Route>
         </Switch>
       </Router>
     </Provider>

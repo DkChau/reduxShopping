@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 
-export const ListContainer = styled.div`
+export const CategoryContainer = styled.div`
     display:flex;
     margin-top: 80px;
     justify-content: center;
@@ -11,7 +11,7 @@ export const ListContainer = styled.div`
     height:auto;
 `
 
-export const ListWrapper=styled.div`
+export const CategoryWrapper=styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
@@ -19,7 +19,7 @@ export const ListWrapper=styled.div`
     height:100%;
 `
 
-export const ListItem=styled.ul`
+export const CategoryItem=styled.ul`
     display:flex;
     height:auto;
     width:auto;
