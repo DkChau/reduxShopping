@@ -24,16 +24,22 @@ export const NavLinks=styled.nav`
     height:80px;
     color:white;
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 `
 
 export const LinkWrapper=styled.div`
+    width:50%;
+    height:auto;
+`
+
+export const LogoWrapper=styled.div`
     width:auto;
     height:auto;
 `
 export const LinkLogo = styled.img`
-    height:40px;
+    height:45px;
+    padding-left: 40px;
     width:auto;
 `
 export const LinkItem=styled(Link)`
@@ -42,4 +48,28 @@ export const LinkItem=styled(Link)`
     font-size:24px;
     font-weight:400;
     
+`
+
+export const MobileIcon=styled.div`
+    display:none;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding-right: 40px;
+    color:black;
+
+    @media screen and (max-width:768px){
+        display:flex;
+    }
+`
+
+export const RouteLinks = styled.div`
+    display:flex;
+    width:50%;
+    justify-content: space-around;
+    align-items: center;
+
+    @media screen and (max-width:768px){
+        display:none;
+    }
 `

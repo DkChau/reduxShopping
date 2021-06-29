@@ -4,9 +4,8 @@ import Loading from '../../Components/Loading'
 
 const Home = () => {
     return (
-      <div>
-        <ImageSlider/>
-      </div>
+      <ImageSlider/>
+
     )
 }
 
