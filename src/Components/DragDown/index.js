@@ -12,6 +12,7 @@ import {
     CategoryTitle,
     ArrowIcon,
     CategoryList,
+    HeaderLink,
 } from './DragDownElements';
 
 const DragDown = (props) => {
@@ -25,10 +26,12 @@ const DragDown = (props) => {
         <DragContainer className={props.dragToggle === false ? 'hidden' : 'active'}>
             <DragWrapper>
                 <TopRow>
-                    <ImCross onClick={props.toggleDrag}></ImCross>
+                    <ImCross onClick={()=>{
+                        props.toggleDrag()
+                        setCategoryDrop(false)}}></ImCross>
                 </TopRow>
                 <DragItem>
-                    <DragLink>Home</DragLink>
+                    <HeaderLink className='heading' onClick={props.toggleDrag} to='/'>Home</HeaderLink>
                 </DragItem>
                 <CategoryWrapper>
                     <CategoryHeading onClick={toggleCategory}>
@@ -37,17 +40,25 @@ const DragDown = (props) => {
                             {categoryDrop===false ? <BiDownArrow/> : <BiUpArrow/>}
                         </ArrowIcon>
                     </CategoryHeading>
-                    <CategoryList className={categoryDrop===false ? 'hidden' : 'active'}>
-                        <DragLink>Test1</DragLink>
-                        <DragLink>Test1</DragLink>
-                        <DragLink>Test1</DragLink>
-                        <DragLink>Test1</DragLink>
-                        <DragLink>Test1</DragLink>
-                        <DragLink>Test1</DragLink>
+                    <CategoryList onClick={()=>{
+                        props.toggleDrag();
+                        setCategoryDrop(false);
+                    }} className={categoryDrop===false ? 'hidden' : 'active'}>
+                        <DragLink to='/shop'>All Items</DragLink>
+                        <DragLink to='/category/Super_Mario'>Super Mario </DragLink>
+                        <DragLink to='/category/The_Legend_of_Zelda'>The Legend of Zelda</DragLink>
+                        <DragLink to='/category/Animal_Crossing'>Animal Crossing</DragLink>
+                        <DragLink to='/category/Star_Fox'>Star Fox</DragLink>
+                        <DragLink to='/category/Metroid'>Metroid</DragLink>
+                        <DragLink to='/category/Splatoon'>Splatoon</DragLink>
+                        <DragLink to='/category/Pokemon'>Pokemon</DragLink>
+                        <DragLink to='/category/Kirby'>Kirby</DragLink>
+                        <DragLink to='/category/Fire_Emblem'>Fire Emblem</DragLink>
+                        <DragLink to='/category/Monster_Hunter'>Monster Hunter</DragLink>
                     </CategoryList>
                 </CategoryWrapper>
                 <DragItem>
-                    <DragLink>Cart</DragLink>
+                    <HeaderLink className='heading' onClick={props.toggleDrag} to='/cart'>Cart</HeaderLink>
                 </DragItem>
             </DragWrapper>
         </DragContainer>

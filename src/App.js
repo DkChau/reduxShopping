@@ -9,6 +9,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import ItemList from './Containers/ItemList';
 import Category from './Containers/Category';
 import DragDown from './Components/DragDown';
+import Loading from './Components/Loading';
 
 function App() {
 

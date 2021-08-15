@@ -10,7 +10,6 @@ import {
 const CategoryBar = () => {
     return (
         <CategoryContainer>
-            {/* <CategoryHeading>Franchises</CategoryHeading> */}
             <CategoryWrapper>
                 <CategoryLink to='/category/Super_Mario'>
                     <CategoryWord>Super Mario</CategoryWord>
@@ -19,7 +18,7 @@ const CategoryBar = () => {
                     <CategoryWord>Metroid</CategoryWord>
                 </CategoryLink>
                 <CategoryLink to='/category/The_Legend_of_Zelda'>
-                    <CategoryWord>The Legend of Zelda</CategoryWord>
+                    <CategoryWord>Legend of Zelda</CategoryWord>
                 </CategoryLink>
                 <CategoryLink to='/category/Animal_Crossing'>
                     <CategoryWord>Animal Crossing</CategoryWord>

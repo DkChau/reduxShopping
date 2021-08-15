@@ -2,13 +2,24 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 
 export const CategoryContainer=styled.div`
-    height:80px;
-    width:100vw;
+    height:auto;
+    width:100%;
+    position:absolute;
+    bottom:-402px;
+    overflow:auto;
     display:flex;
+    border:1px solid black;
+    border-top:0;
     justify-content: center;
+    background:white;
     text-align:center;
     flex-direction: column;
     align-items: center;
+    
+
+    @media screen and (max-width:768px){
+        display:none;
+    }
 `
 
 export const CategoryHeading=styled.h3`
@@ -18,17 +29,20 @@ export const CategoryHeading=styled.h3`
 
 export const CategoryWrapper=styled.div`
     display:flex;
-    justify-content: center;
-    align-items: center;
-    width:100%;
-    height:100%;
+    flex-direction: column;
+    height:auto;
+    width:auto;
 `
 
 export const CategoryLink = styled(Link)`
     height:40px;
     text-decoration:none;
     width:auto;
-    padding:10px 40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 10px;
+    font-size:20px;
     color:black;
     font-weight:300;
     text-align:center;
@@ -36,8 +50,27 @@ export const CategoryLink = styled(Link)`
 
     &:hover{
         color:red;
-        font-size: 20px;
+        font-size: 21px;
     }
+
+    @media (max-width:1060px){
+        font-size:16px;
+
+        &:hover{
+        color:red;
+        font-size: 17px;
+        }
+    }
+
+    @media (max-width:850px){
+        font-size:14px;
+
+        &:hover{
+        color:red;
+        font-size: 15px;
+        }
+    }
+
 
 `
 

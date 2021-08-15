@@ -3,75 +3,65 @@ import {Link} from 'react-router-dom';
 
 export const ListContainer = styled.div`
     display:flex;
-    margin-top: 80px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width:100vw;
-    height:auto;
-`
-
-export const ListWrapper=styled.div`
-    display:flex;
-    justify-content:center;
-    align-items:center;
     width:100%;
-    height:100%;
-`
-
-export const ListItem=styled.ul`
-    display:flex;
     height:auto;
-    width:auto;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
+    flex-direction:column;
 `
-
-export const Item=styled(Link)`
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    margin:40px 60px;
-    width:250px;
-    height:290px;
-    padding:0 10px;
-    padding-top: 20px;
-    border:1px solid black;
-    border-radius: 50px;
-    text-decoration:none;
-    /* transition: width 0.5s, height 0.5s;  */
-
-    /* &:hover{
-        width:260px;
-        height:300px;
-    }  */
+export const ListHeading = styled.div`
+    color:black;
+    font-size:2rem;
+    padding: 60px 0 10px 0;
+    margin-bottom: 50px;
+    border-bottom: 2px solid black;
+`
+export const ListWrapper=styled.div`
+    width:75%;
+    display:grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows:400px;
 `
 
 export const ItemImg=styled.img`
-    height:150px;
-    /* border:1px solid black;
-    padding: 20px;
-    border-radius: 50px; */
-    width:auto;
+    height:210px;
+    margin: 0 auto;
+    transition: height 0.2s ease-in;
 `
-
 export const ItemName=styled.h2`
-    padding-top: 20px;
-    margin:0;
-    text-align:center;
-    font-size: 16px;
-    color:#3d70b2;
+    padding:0;
+    margin:0%;
+    font-weight:600;
+    font-size:1.2rem;
+    
 `
 
 export const ItemSeries=styled.h3`
-    color:black;
+    padding:0;
+    margin:0%;
     font-weight:300;
-    margin:5px;
+    font-size:1rem;
 `
-
-export const ItemRelease = styled.p`
+export const Item=styled(Link)`
+    display:grid;
+    height:300px;
+    width:250px;
+    grid-template-rows: 1fr auto auto;
+    grid-template-columns:1fr;
+    text-align:center;
+    justify-content:center;
+    align-content:center;
+    flex-direction: column;
+    text-decoration:none;
     color:black;
+    margin: 0 40px;
+
+    &:hover{
+        ${ItemImg}{
+            height:230px;
+        }
+        ${ItemName}{color:#005bc6;}
+        ${ItemSeries}{color:#005bc6}
+    }
 `

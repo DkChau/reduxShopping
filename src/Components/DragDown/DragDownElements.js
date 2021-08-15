@@ -2,19 +2,21 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 
 export const DragContainer = styled.div`
-    width:100vw;
-    height:100%;
-    position:absolute;
+    width:100%;
+    height:100vh;
+    position:fixed;
     margin:0;
     padding:0;
-    overflow-x: hidden;
     top:0;
     background:white;
     z-index:999;
+    transition: 0.3s ease-in-out;
 
     &.hidden{
-        display:none;
+        opacity:0;
+        margin-left: -100%;
     }
+
 `
 
 export const DragWrapper = styled.div`
@@ -31,8 +33,8 @@ export const TopRow=styled.div`
     justify-content: flex-end;
     align-items: center;
     height:80px;
-    width:100%;
-    padding-right: 40px;
+    width:calc(100% - 40px);
+    padding-right:40px;
     color:black;
     font-size: 24px;
 `
@@ -43,13 +45,17 @@ export const DragItem = styled.div`
     display:flex;
     justify-content: center;
     align-items: center;
+    
 `
 
 export const DragLink = styled(Link)`
-    color:green;
+    color:black;
     text-decoration: none;
-    font-size: 24px;
-    font-weight: 600;
+    margin:8px 0;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 400;
+
 `
 
 export const CategoryWrapper = styled.div`
@@ -69,18 +75,29 @@ export const CategoryHeading = styled.div`
     height:80px;
 `
 
+export const HeaderLink = styled(Link)`
+    text-align: center;
+    font-size: 24px;
+    text-decoration:none;
+    font-weight: 400;
+    color:black;
+`
+
 export const CategoryTitle=styled.div`
     text-align: center;
     font-size: 24px;
-    padding-right: 20px;
-    font-weight: 600;
-    color:green;
+    font-weight: 400;
+    color:black;
 `
 
 export const ArrowIcon = styled.div`
     display:flex;
-    justify-content: end;
+    width:calc(100vw - 150px);
+    justify-content: center;
+    padding-left:150px;
     align-items: end;
+    position: absolute;
+    right:0;
 `
 
 export const CategoryList = styled.div`

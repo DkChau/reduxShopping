@@ -1,42 +1,44 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Logo from '../../Images/Logo.png'
-import {FaBars} from 'react-icons/fa';
+import CategoryBar from '../CategoryBar'
 import { 
     NavContainer,
-    NavWrapper,
     NavLinks,
     LinkWrapper,
     LinkItem,
     LinkLogo,
-    MobileIcon,
     RouteLinks,
-    LogoWrapper
+    Menu
  } from './NavBarElements'
 
 const NavBar = (props) => {
 
+    const [category,setCategory] = useState(false);
+
+    const toggleCategory = () =>{
+        setCategory(!category)
+    }
+    const closeCategory = () => {
+        setCategory(false);
+    }
     return (
         <NavContainer>
-            <NavWrapper>
-                <NavLinks>
-                    <LogoWrapper>
-                        <LinkItem to='/'>
-                            <LinkLogo src={Logo}></LinkLogo>
-                        </LinkItem>
-                    </LogoWrapper>
-                    <MobileIcon>
-                        <FaBars onClick={props.toggleDrag}></FaBars>
-                    </MobileIcon>
-                    <RouteLinks>
-                        <LinkWrapper>
-                            <LinkItem to='/shop'>Shop</LinkItem>
-                        </LinkWrapper>
-                        <LinkWrapper>
-                            <LinkItem to='/Cart'>Cart</LinkItem>
-                        </LinkWrapper>
-                    </RouteLinks>
-                </NavLinks>
-            </NavWrapper>
+            <NavLinks>
+                <LinkWrapper>
+                    <LinkItem to='/'>
+                        <LinkLogo src={Logo}></LinkLogo>
+                    </LinkItem>
+                </LinkWrapper>
+                <RouteLinks onClick={closeCategory}>
+                    <LinkWrapper onMouseEnter={toggleCategory} onMouseLeave={closeCategory}>
+                        <LinkItem to='/shop'>Shop</LinkItem>
+                        {category ?  <CategoryBar></CategoryBar>: <></>}
+                    </LinkWrapper>
+                    <LinkWrapper>
+                        <LinkItem to='/Cart'>Cart</LinkItem>
+                    </LinkWrapper>
+                </RouteLinks>
+            </NavLinks>
         </NavContainer>
     )
 }

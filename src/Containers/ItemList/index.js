@@ -6,12 +6,11 @@ import Loading from '../../Components/Loading'
 import { 
     ListContainer,
     ListWrapper,
-    ListItem,
     Item,
     ItemImg,
     ItemName,
     ItemSeries,
-    ItemRelease,
+    ListHeading,
  } from './ItemListElements';
 import CategoryBar from '../CategoryBar';
 
@@ -26,20 +25,19 @@ const ItemList = (props) => {
     
     return (
         <ListContainer>
-            <CategoryBar/>
+            <ListHeading>All Figures</ListHeading>
+            {/* <CategoryBar/> */}
             <ListWrapper>
-                <ListItem>
-                    {props.data.products.map(item=>{
-                        return (
-                            <Item key={uniqid()}to={'item/'+item.head+item.tail}>
-                                <ItemImg src={item.image}></ItemImg>
-                                <ItemName>{item.name}</ItemName>
-                                <ItemSeries>{item.gameSeries}</ItemSeries>
-                                {/* <ItemRelease>{item.release.jp}</ItemRelease> */}
-                            </Item>
-                        )
-                    })}
-                </ListItem>
+                {props.data.products.map(item=>{
+                    return (
+                        <Item key={uniqid()}to={'item/'+item.head+item.tail}>
+                            <ItemImg src={item.image}></ItemImg>
+                            <ItemName>{item.name}</ItemName>
+                            <ItemSeries>{item.gameSeries}</ItemSeries>
+                            {/* <ItemRelease>{item.release.jp}</ItemRelease> */}
+                        </Item>
+                    )
+                })}
             </ListWrapper>
         </ListContainer>
 

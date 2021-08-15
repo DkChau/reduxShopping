@@ -1,113 +1,105 @@
 import styled from 'styled-components';
 
 export const CartContainer=styled.div`
-    width:100vw;
-    height:calc(100vh - 80px);
     display:flex;
+    width:100%;
+    height:100%;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 `
 //Row 1
+export const CartWrapper = styled.div`
+    display:grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    width:40%;
+`
 export const CartHeading=styled.div`
     display:grid;
-    grid-template-columns: 150px 1fr auto;
+    grid-template-columns: 120px 1fr 150px;
     justify-content: center;
     align-content: center;
-    width:80%;
-    max-width:800px;
-    height: 200px;
+    text-align:center;
 
 `
 export const CartTagItem=styled.h2`
-    color:black;
-    text-align:center;
+    margin:0;
+    padding:0;
 `
 
 export const CartTagPrice=styled.h2`
-    color:black;
     grid-column: 3/4;
-`
-//All other rows
-export const CartWrapper = styled.div`
-    width:80%;
-    max-width:800px;
-    height:80%;
-    display:flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
+    margin:0;
+    padding:0;
 `
 
 export const CartItem = styled.div`
     display:grid;
-    grid-template-columns: 150px 1fr auto;
-    justify-content: start;
-    align-content: start;
-    width:100%;
-    height: 200px;
+    grid-template-columns: auto 1fr 150px;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 40px;
+    border-top: 1px solid black;
+    padding-top: 40px;
+
+    &:last-child{
+        margin-bottom: 120px;
+    }
 
 `
 
 //First Column
 export const ItemImg = styled.img`
-    height:150px;
-    justify-self: center;
-    width:auto;
+    width:125px;
 `
 
 //Last Column
 export const ItemPrice = styled.p`
-    color:black;
+   text-align: center;
 `
 
 //Second Column
 export const ItemDescription=styled.div`
-    flex-direction: column;
-    align-items: start;
     display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 `
 
 export const ItemName=styled.p`
-    color:red;
+    margin:0;
+    padding:0;
 `
 
 export const ItemSeries=styled.p`
-    color:black;
+    
 `
 export const ItemQuantity = styled.input`
-    color:green;
+    
 `
 
 export const BtnWrapper = styled.div`
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    justify-: flex-end;
+
 `
 
 export const DeleteBtn = styled.button`
-    height:30px;
-    background: none;
-    border:none;
-    text-decoration:underline;
-    width:150px;
+
 `
 
 //Footer
 export const CartFooter = styled.div`
-    position:absolute;
-    bottom: 0;
+    position:fixed;
+    bottom:0;
     left:0;
-    width:100vw;
     height:80px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    border:1px solid black;
+    width:100%;
 `
 
 export const CartTotal=styled.div`
-    color:black;
+  
 `
 
 

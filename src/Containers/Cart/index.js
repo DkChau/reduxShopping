@@ -15,7 +15,6 @@ import {
     CartTotal,
     ItemDescription,
     ItemName,
-    ItemSeries,
     CartTagItem,
     CartTagPrice,
     CartHeading,
@@ -35,11 +34,11 @@ const Cart = (props) => {
     if(props.cart.cart.length===0){return ( <div> empty </div>)}
     return (
         <CartContainer>
-            <CartHeading>
-                <CartTagItem>Item</CartTagItem>
-                <CartTagPrice>Price</CartTagPrice>
-            </CartHeading>
             <CartWrapper>
+                <CartHeading>
+                    <CartTagItem>Item</CartTagItem>
+                    <CartTagPrice>Price</CartTagPrice>
+                </CartHeading>
                 {props.cart.cart.map((item,index)=>{
                     return (
                     <CartItem key={'cartItem'+index} > 

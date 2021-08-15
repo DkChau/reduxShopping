@@ -6,16 +6,16 @@ import Loading from '../../Components/Loading'
 import { 
     ItemContainer,
     ItemWrapper,
-    ItemInfo,
     ItemImg,
     ItemName,
     ItemPrice,
     BtnWrapper,
     Button,
     ItemSeries,
-    DateWrapper,
-    Dates,
     ButtonLink,
+    LinkWrapper,
+    ImageWrapper,
+    InfoWrapper,
  } from './ItemElements';
 
 const Item = (props) => {
@@ -38,21 +38,20 @@ const Item = (props) => {
     return (
         <ItemContainer>
             <ItemWrapper>
-                <ItemInfo>
+                <ImageWrapper>
                     <ItemImg src={props.data.singleProduct.image}></ItemImg>
-                    <ItemName>Character Name: {props.data.singleProduct.name}</ItemName>
-                    <ItemSeries>Game Series: {props.data.singleProduct.name}</ItemSeries>
+                </ImageWrapper>
+                <InfoWrapper>
+                    <ItemName>{props.data.singleProduct.name}</ItemName>
+                    <ItemSeries>Game Series: {props.data.singleProduct.gameSeries}</ItemSeries>
                     <ItemPrice>Price: 29.99</ItemPrice>
-                    {/* <DateWrapper>
-                        <Dates>EU Release Date: {props.data.singleProduct.release.eu===null ? 'N/A' : props.data.singleProduct.release.eu}</Dates>
-                        <Dates>NA Release Date: {props.data.singleProduct.release.na===null ? 'N/A' : props.data.singleProduct.release.na}</Dates>
-                        <Dates>JP Release Date: {props.data.singleProduct.release.jp==undefined ? 'N/A' : props.data.singleProduct.release.jp}</Dates>
-                    </DateWrapper> */}
                     <BtnWrapper>
                         <Button onClick={addCart}>Add to Cart</Button>
-                        <ButtonLink to='/cart' ref={buttonRef} className='hidden'>Proceed to Cart</ButtonLink>
+                        <LinkWrapper to='/cart' ref={buttonRef} className='hidden'>
+                            <ButtonLink>Proceed to Cart</ButtonLink>
+                        </LinkWrapper>
                     </BtnWrapper>
-                </ItemInfo>
+                </InfoWrapper>
             </ItemWrapper>
         </ItemContainer>
     )

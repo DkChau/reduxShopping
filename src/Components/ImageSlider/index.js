@@ -9,6 +9,7 @@ import {
     SlideImg,
     LinkWrapper,
     ShopLink,
+    IconWrapper,
 } from './SliderElements';
 
 const ImageSlider = () => {
@@ -47,7 +48,9 @@ const ImageSlider = () => {
         <SliderContainer>
             <SliderWrapper>
                 <Slider>
-                    <FaArrowLeft onClick={prevSlide}></FaArrowLeft>
+                    <IconWrapper>
+                        <FaArrowLeft onClick={prevSlide}></FaArrowLeft>
+                    </IconWrapper>
                     {SlideImages.map((slide,index)=>{
                         return (
                             <SlideImg
@@ -56,7 +59,9 @@ const ImageSlider = () => {
                             src={slide.Img}></SlideImg>
                         )
                     })}
-                    <FaArrowRight onClick={nextSlide}></FaArrowRight>
+                    <IconWrapper>
+                        <FaArrowRight onClick={nextSlide}></FaArrowRight>
+                    </IconWrapper>
                 </Slider>
                 <LinkWrapper to='/shop'>
                     <ShopLink>View Catalog</ShopLink>

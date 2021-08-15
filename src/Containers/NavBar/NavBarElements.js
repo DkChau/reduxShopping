@@ -4,72 +4,55 @@ import Background from '../../Images/Background.png';
 
 export const NavContainer=styled.div`
     display:flex;
-    width:100vw;
-    background-image: url(${Background});
-    height:auto;
+    width:100%;
+    height:100px;
     position:sticky;
+    background:white;
     top:0;
+    left:0;
     justify-content: center;
     align-items: center;
+    border: 1px solid black;
 `
-
-export const NavWrapper=styled.div`
-    display:flex;
-    flex-direction: column;
-
-`
-
 export const NavLinks=styled.nav`
-    width:100vw;
-    height:80px;
-    color:white;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
+    width:90%;
+    height:100%;
+    display:grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-content: center;
 `
-
+// export const LogoWrapper=styled.div`
+//     display:flex;
+//     justify-content: center;
+//     align-items:center;
+//     width:100%;
+//     height:100%;
+// `
 export const LinkWrapper=styled.div`
-    width:50%;
-    height:auto;
-`
-
-export const LogoWrapper=styled.div`
-    width:auto;
-    height:auto;
-`
-export const LinkLogo = styled.img`
-    height:45px;
-    padding-left: 40px;
-    width:auto;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction:column;
+    width:100%;
+    height:100%;
+    position:relative;
 `
 export const LinkItem=styled(Link)`
+    color:black;
     text-decoration:none;
-    color:black;
-    font-size:24px;
-    font-weight:400;
-    
+    font-size:1.5rem;
+    font-weight:300;
 `
-
-export const MobileIcon=styled.div`
-    display:none;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    padding-right: 40px;
-    color:black;
-
-    @media screen and (max-width:768px){
-        display:flex;
-    }
+export const LinkLogo = styled.img`
+    width:200px;
+    height:auto;
+    max-width:200px;
 `
-
 export const RouteLinks = styled.div`
     display:flex;
-    width:50%;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
-    @media screen and (max-width:768px){
-        display:none;
-    }
 `
