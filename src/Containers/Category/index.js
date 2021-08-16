@@ -26,7 +26,7 @@ const Category = (props) => {
     
     return (
         <CategoryContainer>
-            <CategoryHeading>{props.match.params.id.split('_').join(' ')}</CategoryHeading>
+            <CategoryHeading>{props.match.params.id.split('_').join(' ') + ' Series'}</CategoryHeading>
             {/* <CategoryBar/> */}
             <CategoryWrapper>
                 {props.data.gameSeriesFigures.map(item=>{

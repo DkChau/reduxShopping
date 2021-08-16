@@ -15,7 +15,7 @@ export const CategoryHeading = styled.div`
     font-size:2rem;
     padding: 60px 0 10px 0;
     margin-bottom: 50px;
-    border-bottom: 2px solid black;
+    font-weight:300;
 `
 
 export const CategoryWrapper=styled.div`
@@ -63,7 +63,7 @@ export const Item=styled(Link)`
         ${ItemImg}{
             height:230px;
         }
-        ${ItemName}{color:blue;}
-        ${ItemSeries}{color:blue}
+        ${ItemName}{color:#005bc6;}
+        ${ItemSeries}{color:#005bc6}
     }
 `

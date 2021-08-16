@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux';
 import uniqid from 'uniqid';
 import { removeFromCart,changeQuantity } from '../../Actions/cartAction';
+import EmptyPage from '../EmptyPage';
 import { 
     CartContainer,
     CartWrapper,
@@ -18,6 +19,9 @@ import {
     CartTagItem,
     CartTagPrice,
     CartHeading,
+    CartMsg,
+    CartBtnWrapper,
+    CartBtn
 } from './CartElements';
 
 const Cart = (props) => {
@@ -31,7 +35,7 @@ const Cart = (props) => {
         props.changeQuantity(e.target.parentNode.id,e.target.value);
     }
 
-    if(props.cart.cart.length===0){return ( <div> empty </div>)}
+    if(props.cart.cart.length===0){return ( <EmptyPage/> ) }
     return (
         <CartContainer>
             <CartWrapper>
@@ -44,7 +48,7 @@ const Cart = (props) => {
                     <CartItem key={'cartItem'+index} > 
                         <ItemImg src={item.image}></ItemImg>
                         <ItemDescription id={item.id}>
-                            <ItemName>{item.name}</ItemName>
+                            <ItemName>{item.name + " Amiibo"}</ItemName>
                             <ItemQuantity onChange={handleChange} type='number' min='1' value={item.quantity}></ItemQuantity>
                             <BtnWrapper>
                                 <DeleteBtn onClick={remCart}>Delete From Cart</DeleteBtn>
@@ -56,7 +60,10 @@ const Cart = (props) => {
                 })}
             </CartWrapper>
             <CartFooter>
-                <CartTotal>{props.cart.total.toFixed(2)}</CartTotal>
+                <CartTotal>{'Cart Total: ' +props.cart.total.toFixed(2)}</CartTotal>
+                <CartBtnWrapper>
+                    <CartBtn>Check out</CartBtn>
+                </CartBtnWrapper>
             </CartFooter>
         </CartContainer>
     )

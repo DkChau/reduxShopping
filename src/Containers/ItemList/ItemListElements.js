@@ -14,7 +14,7 @@ export const ListHeading = styled.div`
     font-size:2rem;
     padding: 60px 0 10px 0;
     margin-bottom: 50px;
-    border-bottom: 2px solid black;
+    font-weight:300;
 `
 export const ListWrapper=styled.div`
     width:75%;

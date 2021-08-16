@@ -25,7 +25,7 @@ const ItemList = (props) => {
     
     return (
         <ListContainer>
-            <ListHeading>All Figures</ListHeading>
+            <ListHeading>All Series</ListHeading>
             {/* <CategoryBar/> */}
             <ListWrapper>
                 {props.data.products.map(item=>{
