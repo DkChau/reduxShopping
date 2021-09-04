@@ -24,18 +24,18 @@ const NavBar = (props) => {
     return (
         <NavContainer>
             <NavLinks>
-                <LinkWrapper>
-                    <LinkItem to='/'>
+                <LinkWrapper to='/'>
+                    <LinkItem>
                         <LinkLogo src={Logo}></LinkLogo>
                     </LinkItem>
                 </LinkWrapper>
                 <RouteLinks onClick={closeCategory}>
-                    <LinkWrapper onMouseEnter={toggleCategory} onMouseLeave={closeCategory}>
-                        <LinkItem to='/shop'>Shop</LinkItem>
+                    <LinkWrapper to='/shop' onMouseEnter={toggleCategory} onMouseLeave={closeCategory}>
+                        <LinkItem >Shop</LinkItem>
                         {category ?  <CategoryBar></CategoryBar>: <></>}
                     </LinkWrapper>
-                    <LinkWrapper>
-                        <LinkItem to='/Cart'>Cart</LinkItem>
+                    <LinkWrapper to='/Cart'>
+                        <LinkItem >Cart</LinkItem>
                     </LinkWrapper>
                 </RouteLinks>
             </NavLinks>

@@ -71,8 +71,8 @@ export const ItemDescription=styled.div`
     display:grid;
     grid-auto-rows: auto;
     grid-template-columns: 1fr;
-    justify-content: center;
-    align-content:center;
+    justify-content: start;
+    align-content:start;
     grid-gap: 10px;
 `
 

@@ -1,4 +1,4 @@
-import React, {useEffect,useRef} from 'react'
+import React, {useEffect,useRef, useState} from 'react'
 import {connect} from 'react-redux';
 import {fetchSingleProduct} from '../../Actions/dataAction'
 import {addToCart} from '../../Actions/cartAction'
@@ -21,6 +21,7 @@ import {
 const Item = (props) => {
 
     const buttonRef=useRef(null);
+    const [showBtn, setShowBtn] = useState(false);
 
     useEffect(()=>{
         props.fetchSingleProduct('https://www.amiiboapi.com/api/amiibo/?id='+props.match.params.id);
@@ -33,6 +34,7 @@ const Item = (props) => {
             props.data.singleProduct.name,
         )
         buttonRef.current.className='';
+        setShowBtn(true);
     }
     if(props.data.pending===true){return <Loading></Loading>}
     return (
@@ -48,7 +50,7 @@ const Item = (props) => {
                     <BtnWrapper>
                         <Button onClick={addCart}>Add to Cart</Button>
                         <LinkWrapper to='/cart' ref={buttonRef} className='hidden'>
-                            <ButtonLink>Proceed to Cart</ButtonLink>
+                            {showBtn?<ButtonLink>Proceed to Cart</ButtonLink>:<></>}
                         </LinkWrapper>
                     </BtnWrapper>
                 </InfoWrapper>

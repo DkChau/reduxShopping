@@ -19,7 +19,6 @@ import {
     CartTagItem,
     CartTagPrice,
     CartHeading,
-    CartMsg,
     CartBtnWrapper,
     CartBtn
 } from './CartElements';

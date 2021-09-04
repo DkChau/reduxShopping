@@ -9,7 +9,6 @@ export const CategoryContainer=styled.div`
     overflow:auto;
     display:flex;
     border:1px solid black;
-    border-top:0;
     justify-content: center;
     background:white;
     text-align:center;
@@ -46,7 +45,7 @@ export const CategoryLink = styled(Link)`
     color:black;
     font-weight:300;
     text-align:center;
-    transition:color 0.3s , font-size 0.3s;
+    transition:all 0.3s;
 
     &:hover{
         color:red;
