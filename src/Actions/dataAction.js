@@ -42,7 +42,7 @@ function fetchProductsError(error) {
 export const fetchProducts = (url) => {
     return (dispatch) => {
         dispatch(fetchProductsPending());
-        fetch(url)
+        fetch('https://www.amiiboapi.com/api/amiibo/?type=figure')
             .then(res => res.json())
             .then(res => {
                 if(res.error) {
