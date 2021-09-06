@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/reduxShopping/static/css/main.9c4ed9c1.chunk.css",
-    "main.js": "/reduxShopping/static/js/main.2abd5e80.chunk.js",
-    "main.js.map": "/reduxShopping/static/js/main.2abd5e80.chunk.js.map",
+    "main.js": "/reduxShopping/static/js/main.bf551342.chunk.js",
+    "main.js.map": "/reduxShopping/static/js/main.bf551342.chunk.js.map",
     "runtime-main.js": "/reduxShopping/static/js/runtime-main.7b7d4c9c.js",
     "runtime-main.js.map": "/reduxShopping/static/js/runtime-main.7b7d4c9c.js.map",
     "static/js/2.d2c0a8f5.chunk.js": "/reduxShopping/static/js/2.d2c0a8f5.chunk.js",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.7b7d4c9c.js",
     "static/js/2.d2c0a8f5.chunk.js",
     "static/css/main.9c4ed9c1.chunk.css",
-    "static/js/main.2abd5e80.chunk.js"
+    "static/js/main.bf551342.chunk.js"
   ]
 }
