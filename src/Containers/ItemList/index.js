@@ -12,7 +12,6 @@ import {
     ItemSeries,
     ListHeading,
  } from './ItemListElements';
-import CategoryBar from '../CategoryBar';
 
 const ItemList = (props) => {
     useEffect(()=>{

@@ -12,7 +12,6 @@ import {
     BtnWrapper,
     Button,
     ItemSeries,
-    ButtonLink,
     LinkWrapper,
     ImageWrapper,
     InfoWrapper,
@@ -50,7 +49,7 @@ const Item = (props) => {
                     <BtnWrapper>
                         <Button onClick={addCart}>Add to Cart</Button>
                         <LinkWrapper to='/cart' ref={buttonRef} className='hidden'>
-                            {showBtn?<ButtonLink>Proceed to Cart</ButtonLink>:<></>}
+                            {showBtn?<Button>Proceed to Cart</Button>:<></>}
                         </LinkWrapper>
                     </BtnWrapper>
                 </InfoWrapper>

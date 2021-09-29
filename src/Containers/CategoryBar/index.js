@@ -4,7 +4,6 @@ import {
     CategoryLink,
     CategoryWrapper,
     CategoryWord,
-    CategoryHeading,
 } from './CategoryBarElements'
 
 const CategoryBar = () => {

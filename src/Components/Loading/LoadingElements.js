@@ -44,7 +44,7 @@ const blink3 = keyframes`
 
 export const LoadingContainer = styled.div`
     height:calc(100vh - 80px);
-    width:100vw;
+    width:100%;
     display:flex;
     justify-content: center;
     align-items: center;

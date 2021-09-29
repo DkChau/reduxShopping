@@ -13,17 +13,19 @@ export const CategoryContainer = styled.div`
 export const CategoryHeading = styled.div`
     color:black;
     font-size:2rem;
-    padding: 60px 0 10px 0;
-    margin-bottom: 50px;
+    padding: 7rem 0 1rem 0;
+    margin-bottom: 5rem;
     font-weight:300;
 `
 
 export const CategoryWrapper=styled.div`
-    width:75%;
+    width:80%;
     display:grid;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows:400px;
+    justify-content: center;
+    align-content:center;
 `
 
 export const ItemImg=styled.img`
@@ -43,12 +45,12 @@ export const ItemSeries=styled.h3`
     padding:0;
     margin:0%;
     font-weight:300;
-    font-size:1rem;
+    font-size:1.1rem;
 `
 export const Item=styled(Link)`
     display:grid;
     height:300px;
-    width:250px;
+    width:100%;
     grid-template-rows: 1fr auto auto;
     grid-template-columns:1fr;
     text-align:center;
@@ -57,7 +59,6 @@ export const Item=styled(Link)`
     flex-direction: column;
     text-decoration:none;
     color:black;
-    margin: 0 40px;
 
     &:hover{
         ${ItemImg}{

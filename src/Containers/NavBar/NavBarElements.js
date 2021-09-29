@@ -7,18 +7,19 @@ export const NavContainer=styled.div`
     width:100%;
     height:100px;
     position:sticky;
-    background-image: url(${Background});
+    /* background-image: url(${Background}); */
     top:0;
     left:0;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
+    background:white;
 `
 export const NavLinks=styled.nav`
     width:90%;
     height:100%;
     display:grid;
-    grid-template-columns: 400px 400px;
+    grid-template-columns: 25rem 25rem;
     grid-template-rows: 1fr;
     justify-content: center;
     align-content: center;
@@ -43,15 +44,15 @@ export const LinkWrapper=styled(Link)`
 
 `
 export const LinkItem=styled.span`
-    font-size:1.5rem;
+    font-size:2rem;
     font-weight:300;
 
     
 `
 export const LinkLogo = styled.img`
-    width:200px;
+    width:12.5rem;
     height:auto;
-    max-width:200px;
+    max-width:12.5rem;
 `
 export const RouteLinks = styled.div`
     display:flex;

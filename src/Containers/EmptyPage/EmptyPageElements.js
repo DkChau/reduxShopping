@@ -10,7 +10,8 @@ export const EmptyContainer = styled.div`
     flex-direction: column;
 `
 export const EmptyImageWrapper = styled.img`
-    width:500px;
+    width:31.25rem;
+    min-width:400px;
     height:auto;
 `
 export const EmptyText = styled.p`

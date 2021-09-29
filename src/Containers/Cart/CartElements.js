@@ -7,14 +7,14 @@ export const CartContainer=styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 2rem;
 `
 //Row 1
 export const CartWrapper = styled.div`
     display:grid;
     grid-auto-rows: auto;
     grid-template-columns: 1fr;
-    grid-gap: 40px;
+    grid-gap: 2rem;
     width:40%;
 `
 export const CartHeading=styled.div`
@@ -53,10 +53,11 @@ export const CartItem = styled.div`
 
 //First Column
 export const ItemImg = styled.img`
-    width:125px;
+    width:7.813rem;
+    min-width:105px;
     box-shadow: 2px 2px 12px 3px rgba(0, 0, 0, 0.2);
     border-radius:20px;
-    padding:20px;
+    padding:1.3rem;
 `
 
 //Last Column
@@ -73,7 +74,7 @@ export const ItemDescription=styled.div`
     grid-template-columns: 1fr;
     justify-content: start;
     align-content:start;
-    grid-gap: 10px;
+    grid-gap: .6rem;
 `
 
 export const ItemName=styled.p`
@@ -105,8 +106,8 @@ export const CartFooter = styled.div`
     align-items:center;
     background:White;
     left:0;
-    height:80px;
-    border:1px solid black;
+    height:50px;
+    border-top:1px solid black;
     width:100%;
 `
 export const CartTotal=styled.div`
@@ -123,7 +124,8 @@ export const CartBtnWrapper = styled.div`
 export const CartBtn = styled.button`
     border:1px solid black;
     background:none;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    padding:0 10px;
     font-weight:300;
 `
 
