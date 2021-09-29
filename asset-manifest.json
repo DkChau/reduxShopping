@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/reduxShopping/static/css/main.9c4ed9c1.chunk.css",
-    "main.js": "/reduxShopping/static/js/main.c9dc012b.chunk.js",
-    "main.js.map": "/reduxShopping/static/js/main.c9dc012b.chunk.js.map",
+    "main.css": "/reduxShopping/static/css/main.49d6cd99.chunk.css",
+    "main.js": "/reduxShopping/static/js/main.19370103.chunk.js",
+    "main.js.map": "/reduxShopping/static/js/main.19370103.chunk.js.map",
     "runtime-main.js": "/reduxShopping/static/js/runtime-main.7b7d4c9c.js",
     "runtime-main.js.map": "/reduxShopping/static/js/runtime-main.7b7d4c9c.js.map",
     "static/js/2.f2e4848e.chunk.js": "/reduxShopping/static/js/2.f2e4848e.chunk.js",
     "static/js/2.f2e4848e.chunk.js.map": "/reduxShopping/static/js/2.f2e4848e.chunk.js.map",
     "index.html": "/reduxShopping/index.html",
-    "static/css/main.9c4ed9c1.chunk.css.map": "/reduxShopping/static/css/main.9c4ed9c1.chunk.css.map",
+    "static/css/main.49d6cd99.chunk.css.map": "/reduxShopping/static/css/main.49d6cd99.chunk.css.map",
     "static/js/2.f2e4848e.chunk.js.LICENSE.txt": "/reduxShopping/static/js/2.f2e4848e.chunk.js.LICENSE.txt",
     "static/media/Background.738a4237.png": "/reduxShopping/static/media/Background.738a4237.png",
     "static/media/EmptyImage.35d74ce2.png": "/reduxShopping/static/media/EmptyImage.35d74ce2.png",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.7b7d4c9c.js",
     "static/js/2.f2e4848e.chunk.js",
-    "static/css/main.9c4ed9c1.chunk.css",
-    "static/js/main.c9dc012b.chunk.js"
+    "static/css/main.49d6cd99.chunk.css",
+    "static/js/main.19370103.chunk.js"
   ]
 }
