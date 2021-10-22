@@ -55,27 +55,61 @@ export const ItemPrice = styled.h4`
 `   
 
 export const BtnWrapper = styled.div`
-    display:flex;
-    height:auto;
-    width:auto;
+    display:grid;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-content: center;
+    grid-template-rows: 1fr 1fr;
+    grid-gap:8px;
     margin-top: 20px;
 `
-
-export const Button=styled.button`
-    border:1px solid black;
-    background:none;
-    width:125px;
-    margin:2px 0;
-    padding:3px 1px;
-    cursor:pointer;
-`
-
 export const LinkWrapper = styled(Link)`
+    text-decoration:none;
+    color:black;
+`
+export const ButtonSet = styled.span`
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 32px 32px;
+    transition:transform 0.3s ease;
+`
+export const TextWrapper = styled.span`
+    text-align:center;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 
 `
+export const Text = styled.span`
+    display:flex;
+`
+export const IconWrapper = styled.span`
+    display:flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    font-size:20px;
+`
+export const Button = styled.div`
+    border:1px solid black;
+    padding:0 10px;
+    height:32px;
+    width:150px;
+    overflow-y:hidden;
+    cursor:pointer;
 
+    &:hover{
+        ${ButtonSet}{
+            transform:translateY(-32px);
+        }
+    }
 
+    &.active{
+        display:block;
+    }
 
+    &.hidden{
+        display:none;
+    }
+`

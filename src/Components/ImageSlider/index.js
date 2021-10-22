@@ -1,6 +1,7 @@
 import React, {useState, useEffect , useRef} from 'react'
 import { SlideImages } from './SlideData';
 import {FaArrowLeft, FaArrowRight} from 'react-icons/fa';
+import {BsArrowRight} from 'react-icons/bs';
 import uniqid from 'uniqid'
 import { 
     SliderContainer,
@@ -10,6 +11,8 @@ import {
     LinkWrapper,
     ShopLink,
     IconWrapper,
+    ArrowWrapper,
+    Arrow,
 } from './SliderElements';
 
 const ImageSlider = () => {
@@ -63,8 +66,13 @@ const ImageSlider = () => {
                         <FaArrowRight onClick={nextSlide}></FaArrowRight>
                     </IconWrapper>
                 </Slider>
-                <LinkWrapper to='/shop'>
-                    <ShopLink>View Catalog</ShopLink>
+                <LinkWrapper  to='/shop'>
+                    <ArrowWrapper>
+                        <ShopLink>View Catalog</ShopLink>
+                        <Arrow>
+                            <BsArrowRight/>
+                        </Arrow>
+                    </ArrowWrapper>
                 </LinkWrapper>
             </SliderWrapper>
         </SliderContainer>

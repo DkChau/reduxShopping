@@ -11,9 +11,9 @@ const Loading = () => {
     return (
         <LoadingContainer>
             <LoadingWrapper>
-                <LoadingCircle></LoadingCircle>
-                <LoadingCircle2></LoadingCircle2>
-                <LoadingCircle3></LoadingCircle3>
+                <LoadingCircle/>
+                <LoadingCircle2/>
+                <LoadingCircle3/>
             </LoadingWrapper>
         </LoadingContainer>
     )

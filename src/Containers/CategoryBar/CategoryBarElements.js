@@ -27,15 +27,15 @@ export const CategoryLink = styled(Link)`
     justify-content: center;
     align-items: center;
     padding:0 .625rem;
-    font-size:1.25rem;
+    font-size:1.2rem;
     color:black;
     font-weight:300;
     text-align:center;
     transition:all 0.3s;
 
     &:hover{
-        color:red;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        color:#005bc6;
     }
 `
 

@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import {fetchSingleProduct} from '../../Actions/dataAction'
 import {addToCart} from '../../Actions/cartAction'
 import Loading from '../../Components/Loading'
+import {AiOutlinePlus} from 'react-icons/ai';
+import {RiShoppingCartLine} from 'react-icons/ri';
 import { 
     ItemContainer,
     ItemWrapper,
@@ -10,16 +12,19 @@ import {
     ItemName,
     ItemPrice,
     BtnWrapper,
-    Button,
     ItemSeries,
-    LinkWrapper,
     ImageWrapper,
     InfoWrapper,
+    Button,
+    ButtonSet,
+    TextWrapper,
+    IconWrapper,
+    Text,
+    LinkWrapper,
  } from './ItemElements';
 
 const Item = (props) => {
 
-    const buttonRef=useRef(null);
     const [showBtn, setShowBtn] = useState(false);
 
     useEffect(()=>{
@@ -32,10 +37,10 @@ const Item = (props) => {
             props.data.singleProduct.image,
             props.data.singleProduct.name,
         )
-        buttonRef.current.className='';
         setShowBtn(true);
     }
     if(props.data.pending===true){return <Loading></Loading>}
+    
     return (
         <ItemContainer>
             <ItemWrapper>
@@ -47,10 +52,28 @@ const Item = (props) => {
                     <ItemSeries>Game Series: {props.data.singleProduct.gameSeries}</ItemSeries>
                     <ItemPrice>Price: 29.99</ItemPrice>
                     <BtnWrapper>
-                        <Button onClick={addCart}>Add to Cart</Button>
-                        <LinkWrapper to='/cart' ref={buttonRef} className='hidden'>
-                            {showBtn?<Button>Proceed to Cart</Button>:<></>}
-                        </LinkWrapper>
+                        <Button onClick={addCart}>
+                            <ButtonSet>
+                                <TextWrapper>
+                                    <Text>Add to Cart</Text>
+                                </TextWrapper>
+                                <IconWrapper>
+                                    <AiOutlinePlus/>
+                                </IconWrapper>
+                            </ButtonSet>
+                        </Button>
+                        <Button className={showBtn ? 'active' : 'hidden'}>
+                            <LinkWrapper to='/cart'>
+                                <ButtonSet>
+                                    <TextWrapper>
+                                        <Text>Go to Cart</Text>
+                                    </TextWrapper>
+                                    <IconWrapper>
+                                        <RiShoppingCartLine/>
+                                    </IconWrapper>
+                                </ButtonSet>
+                            </LinkWrapper>
+                        </Button>
                     </BtnWrapper>
                 </InfoWrapper>
             </ItemWrapper>

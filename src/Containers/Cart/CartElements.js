@@ -95,6 +95,11 @@ export const DeleteBtn = styled.button`
     background:none;
     text-decoration:underline;
     cursor: pointer;
+    transition:color 0.3s ease;
+
+    &:hover{
+        color:#d92f2f;
+    }
 `
 
 //Footer
