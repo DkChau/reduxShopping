@@ -119,20 +119,7 @@ export const CartTotal=styled.div`
     font-size:1.5rem;
     font-weight:300;
 `
-export const CartBtnWrapper = styled.div`
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    padding:0 40px;
-    font-weight:300;
-`
-export const CartBtn = styled.button`
-    border:1px solid black;
-    background:none;
-    font-size: 1rem;
-    padding:0 10px;
-    font-weight:300;
-`
+
 
 
 

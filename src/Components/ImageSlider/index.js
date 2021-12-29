@@ -1,4 +1,4 @@
-import React, {useState, useEffect , useRef} from 'react'
+import React, {useState, useEffect} from 'react'
 import { SlideImages } from './SlideData';
 import {FaArrowLeft, FaArrowRight} from 'react-icons/fa';
 import {BsArrowRight} from 'react-icons/bs';
@@ -59,7 +59,9 @@ const ImageSlider = () => {
                             <SlideImg
                             key={uniqid()} 
                             className={index===slideNum ? 'active' : 'hidden'} 
-                            src={slide.Img}></SlideImg>
+                            src={slide.Img}
+                            alt={slide.description}
+                            ></SlideImg>
                         )
                     })}
                     <IconWrapper>

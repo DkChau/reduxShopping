@@ -47,6 +47,11 @@ export const IconWrapper = styled.div`
     font-size: 1.8rem;
     padding-top: 100px;
     cursor:pointer;
+    transition:all 0.3s ease;
+
+    &:hover{
+        transform:scale(1.06);
+    }
 `
 
 export const SlideImg = styled.img`

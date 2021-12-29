@@ -8,10 +8,10 @@ export const ItemContainer=styled.div`
 `
 export const ItemWrapper = styled.div`
     display:flex;
-    width:50%;
+    width:70%;
     height:100%;
     border-radius: 50px;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin:0 auto;
 `
@@ -29,6 +29,7 @@ export const InfoWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin:0 7rem;
 `
 export const ItemName=styled.h2`
     font-weight:400;

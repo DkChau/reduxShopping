@@ -1,6 +1,5 @@
 import React from 'react'
 import {connect} from 'react-redux';
-import uniqid from 'uniqid';
 import { removeFromCart,changeQuantity } from '../../Actions/cartAction';
 import EmptyPage from '../EmptyPage';
 import { 
@@ -19,8 +18,6 @@ import {
     CartTagItem,
     CartTagPrice,
     CartHeading,
-    CartBtnWrapper,
-    CartBtn
 } from './CartElements';
 
 const Cart = (props) => {
@@ -60,9 +57,6 @@ const Cart = (props) => {
             </CartWrapper>
             <CartFooter>
                 <CartTotal>{'Cart Total: ' +props.cart.total.toFixed(2)}</CartTotal>
-                <CartBtnWrapper>
-                    <CartBtn>Check out</CartBtn>
-                </CartBtnWrapper>
             </CartFooter>
         </CartContainer>
     )

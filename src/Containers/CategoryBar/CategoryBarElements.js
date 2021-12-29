@@ -31,10 +31,10 @@ export const CategoryLink = styled(Link)`
     color:black;
     font-weight:300;
     text-align:center;
-    transition:all 0.3s;
+    transition:all 0.3s ease;
 
     &:hover{
-        font-size: 1.3rem;
+        transform: scale(1.06);
         color:#005bc6;
     }
 `

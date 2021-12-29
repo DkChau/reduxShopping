@@ -26,6 +26,12 @@ export const LinkItem=styled.span`
     font-size:2rem;
     font-weight:300;
     padding:5px 0;
+
+    transition:all 0.3s ease;
+
+    &:hover{
+        transform:scale(1.06);
+    }
 `
 export const LinkWrapper=styled(Link)`
     display:flex;

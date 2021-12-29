@@ -9,7 +9,7 @@ import {
 const EmptyPage = () => {
     return (
         <EmptyContainer>
-            <EmptyImageWrapper src={EmptyImage}>
+            <EmptyImageWrapper alt='Mr. Resetti from Animal Crossing' src={EmptyImage}>
             </EmptyImageWrapper>
             <EmptyText>Empty Cart</EmptyText>
         </EmptyContainer>
